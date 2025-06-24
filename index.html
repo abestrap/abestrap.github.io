@@ -5,174 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
- <style>
-  :root {
-    --primary: #4a90e2;
-    --primary-hover: #357ab8;
-    --background-color: #f4f9fc;
-    --text-color: #333;
-  }
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --primary-hover: #357ab8;
+      --background-color: #f4f9fc;
+      --text-color: #333;
+    }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: system-ui, sans-serif;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: system-ui, sans-serif;
+    }
 
-  body {
-    display: flex;
-    flex-direction: row;
-  }
+    body {
+      display: block;
+    }
 
-  aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background: #ffffff;
-    padding: 1rem;
-    border-right: 1px solid #ddd;
-    text-align: center;
-    overflow-y: auto;
-    box-sizing: border-box;
-    z-index: 1000;
-  }
+    .layout {
+      display: flex;
+    }
 
-  aside img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
+    aside {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100vh;
+      background: #ffffff;
+      padding: 1rem;
+      border-right: 1px solid #ddd;
+      text-align: center;
+      overflow-y: auto;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
 
-  main {
-    margin-left: 250px; /* account for fixed sidebar */
-    padding: 2rem 3rem;
-    width: calc(100% - 250px);
-    box-sizing: border-box;
-  }
+    aside img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
 
-  section {
-    margin-bottom: 4rem;
-  }
+    main {
+      margin-left: 250px;
+      padding: 2rem 3rem;
+      box-sizing: border-box;
+    }
 
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+    section {
+      margin-bottom: 4rem;
+    }
 
-  nav li {
-    margin-bottom: 1rem;
-  }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-  footer {
-    margin-top: 3rem;
-    border-top: 1px solid #ccc;
-    padding-top: 1rem;
-  }
+    nav li {
+      margin-bottom: 1rem;
+    }
 
-  a {
-    color: var(--primary);
-    text-decoration: none;
-  }
+    footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+    }
 
-  a:hover {
-    color: var(--primary-hover);
-    text-decoration: underline;
-  }
-</style>
+    a {
+      color: var(--primary);
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+    }
+  </style>
 </head>
 <body>
-  <aside>
-    <img src="https://via.placeholder.com/100" alt="Your Photo">
-    <h2>My Portfolio</h2>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </aside>
+  <div class="layout">
+    <aside>
+      <img src="https://via.placeholder.com/100" alt="Your Photo">
+      <h2>My Portfolio</h2>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-  <main>
-    <section id="home">
-      <hgroup>
-        <h2>Welcome</h2>
-        <h3>Introduction</h3>
-      </hgroup>
-      <p>Hello! I'm a student passionate about coding and building cool projects. Explore my portfolio to learn more.</p>
-    </section>
+    <main>
+      <section id="home">
+        <hgroup>
+          <h2>Welcome</h2>
+          <h3>Introduction</h3>
+        </hgroup>
+        <p>Hello! I'm a student passionate about coding and building cool projects. Explore my portfolio to learn more.</p>
+      </section>
 
-    <section id="projects">
-      <hgroup>
-        <h2>Projects</h2>
-        <h3>Selected coding work</h3>
-      </hgroup>
-      <ul>
-        <li><strong>Project One</strong> - Description of project one. <a href="#">View Project</a></li>
-        <li><strong>Project Two</strong> - Description of project two. <a href="#">View Project</a></li>
-      </ul>
-    </section>
+      <section id="projects">
+        <hgroup>
+          <h2>Projects</h2>
+          <h3>Selected coding work</h3>
+        </hgroup>
+        <ul>
+          <li><strong>Project One</strong> - Description of project one. <a href="#">View Project</a></li>
+          <li><strong>Project Two</strong> - Description of project two. <a href="#">View Project</a></li>
+        </ul>
+      </section>
 
-    <section id="education">
-      <hgroup>
-        <h2>Education</h2>
-      </hgroup>
-      <ul>
-        <li>Bachelor of Science in Computer Science - University Name (202X - Present)</li>
-        <li>High School Diploma - School Name (Year)</li>
-      </ul>
-    </section>
+      <section id="education">
+        <hgroup>
+          <h2>Education</h2>
+        </hgroup>
+        <ul>
+          <li>Bachelor of Science in Computer Science - University Name (202X - Present)</li>
+          <li>High School Diploma - School Name (Year)</li>
+        </ul>
+      </section>
 
-    <section id="work">
-      <hgroup>
-        <h2>Work Experience</h2>
-      </hgroup>
-      <ul>
-        <li>Intern at Company ABC - Worked on frontend development (Summer 2024)</li>
-        <li>Part-time Developer at XYZ - Maintained school website (2023)</li>
-      </ul>
-    </section>
+      <section id="work">
+        <hgroup>
+          <h2>Work Experience</h2>
+        </hgroup>
+        <ul>
+          <li>Intern at Company ABC - Worked on frontend development (Summer 2024)</li>
+          <li>Part-time Developer at XYZ - Maintained school website (2023)</li>
+        </ul>
+      </section>
 
-    <section id="blog">
-      <hgroup>
-        <h2>Blog</h2>
-        <h3>Sharing my thoughts</h3>
-      </hgroup>
-      <article>
-        <h4>My Journey into Web Development</h4>
-        <p>This is a sample blog post about how I started learning web dev...</p>
-      </article>
-    </section>
+      <section id="blog">
+        <hgroup>
+          <h2>Blog</h2>
+          <h3>Sharing my thoughts</h3>
+        </hgroup>
+        <article>
+          <h4>My Journey into Web Development</h4>
+          <p>This is a sample blog post about how I started learning web dev...</p>
+        </article>
+      </section>
 
-    <section id="contact">
-      <hgroup>
-        <h2>Contact</h2>
-        <h3>Get in touch with me</h3>
-      </hgroup>
-      <form class="grid">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" onclick="event.preventDefault()">Send Message</button>
-      </form>
-      <p>Connect with me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> and <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>.</p>
-    </section>
+      <section id="contact">
+        <hgroup>
+          <h2>Contact</h2>
+          <h3>Get in touch with me</h3>
+        </hgroup>
+        <form class="grid">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" onclick="event.preventDefault()">Send Message</button>
+        </form>
+        <p>Connect with me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> and <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>.</p>
+      </section>
 
-    <footer>
-      <small>
-        &copy; 2025 Your Name. All rights reserved.
-      </small>
-    </footer>
-  </main>
+      <footer>
+        <small>
+          &copy; 2025 Your Name. All rights reserved.
+        </small>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
