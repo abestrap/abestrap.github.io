@@ -16,31 +16,28 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       background-color: var(--background-color);
       color: var(--text-color);
       font-family: system-ui, sans-serif;
+      height: 100%;
     }
 
-    /* Override Pico's default max-width and centering */
-    main {
-      max-width: unset !important;
-      margin: 0 !important;
+    body {
+      display: flex;
     }
 
     aside {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 250px;
       height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
       background: #ffffff;
       padding: 1rem;
       border-right: 1px solid #ddd;
+      box-sizing: border-box;
       text-align: center;
       overflow-y: auto;
-      box-sizing: border-box;
-      z-index: 1000;
     }
 
     aside img {
@@ -50,30 +47,20 @@
       margin-bottom: 1rem;
     }
 
-    .content {
+    main {
       margin-left: 250px;
-      padding: 2rem 3rem;
+      padding: 2rem;
+      width: calc(100% - 250px);
       box-sizing: border-box;
     }
 
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 0;
     }
 
     nav li {
       margin-bottom: 1rem;
-    }
-
-    section {
-      margin-bottom: 4rem;
-    }
-
-    footer {
-      margin-top: 3rem;
-      border-top: 1px solid #ccc;
-      padding-top: 1rem;
     }
 
     a {
@@ -85,10 +72,19 @@
       color: var(--primary-hover);
       text-decoration: underline;
     }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+    }
   </style>
 </head>
 <body>
-
   <aside>
     <img src="https://via.placeholder.com/100" alt="Your Photo">
     <h2>My Portfolio</h2>
@@ -104,7 +100,7 @@
     </nav>
   </aside>
 
-  <main class="content">
+  <main>
     <section id="home">
       <hgroup>
         <h2>Welcome</h2>
@@ -119,8 +115,8 @@
         <h3>Selected coding work</h3>
       </hgroup>
       <ul>
-        <li><strong>Project One</strong> - Description of project one. <a href="#">View Project</a></li>
-        <li><strong>Project Two</strong> - Description of project two. <a href="#">View Project</a></li>
+        <li><strong>Project One</strong> – Description of project one. <a href="#">View Project</a></li>
+        <li><strong>Project Two</strong> – Description of project two. <a href="#">View Project</a></li>
       </ul>
     </section>
 
@@ -129,8 +125,8 @@
         <h2>Education</h2>
       </hgroup>
       <ul>
-        <li>Bachelor of Science in Computer Science - University Name (202X - Present)</li>
-        <li>High School Diploma - School Name (Year)</li>
+        <li>Bachelor of Science in Computer Science – University Name (202X – Present)</li>
+        <li>High School Diploma – School Name (Year)</li>
       </ul>
     </section>
 
@@ -139,8 +135,8 @@
         <h2>Work Experience</h2>
       </hgroup>
       <ul>
-        <li>Intern at Company ABC - Worked on frontend development (Summer 2024)</li>
-        <li>Part-time Developer at XYZ - Maintained school website (2023)</li>
+        <li>Intern at Company ABC – Worked on frontend development (Summer 2024)</li>
+        <li>Part-time Developer at XYZ – Maintained school website (2023)</li>
       </ul>
     </section>
 
@@ -170,9 +166,7 @@
     </section>
 
     <footer>
-      <small>
-        &copy; 2025 Your Name. All rights reserved.
-      </small>
+      <small>&copy; 2025 Your Name. All rights reserved.</small>
     </footer>
   </main>
 </body>
