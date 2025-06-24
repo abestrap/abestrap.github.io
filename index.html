@@ -14,21 +14,24 @@
   }
 
   body {
-    display: flex;
     margin: 0;
     background-color: var(--background-color);
     color: var(--text-color);
     box-sizing: border-box;
-    min-height: 100vh;
   }
 
   aside {
     width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     background: #ffffff;
     padding: 1rem;
     border-right: 1px solid #ddd;
     text-align: center;
-    flex-shrink: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
   }
 
   aside img {
@@ -39,8 +42,8 @@
   }
 
   main {
+    margin-left: 250px; /* Shift right to avoid sidebar overlap */
     padding: 2rem 3rem;
-    flex: 1;
     box-sizing: border-box;
   }
 
