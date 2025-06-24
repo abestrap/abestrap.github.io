@@ -22,12 +22,10 @@
       font-family: system-ui, sans-serif;
     }
 
-    body {
-      display: block;
-    }
-
-    .layout {
-      display: flex;
+    /* Override Pico's default max-width and centering */
+    main {
+      max-width: unset !important;
+      margin: 0 !important;
     }
 
     aside {
@@ -52,14 +50,10 @@
       margin-bottom: 1rem;
     }
 
-    main {
+    .content {
       margin-left: 250px;
       padding: 2rem 3rem;
       box-sizing: border-box;
-    }
-
-    section {
-      margin-bottom: 4rem;
     }
 
     nav ul {
@@ -72,109 +66,10 @@
       margin-bottom: 1rem;
     }
 
+    section {
+      margin-bottom: 4rem;
+    }
+
     footer {
       margin-top: 3rem;
-      border-top: 1px solid #ccc;
-      padding-top: 1rem;
-    }
-
-    a {
-      color: var(--primary);
-    }
-
-    a:hover {
-      color: var(--primary-hover);
-    }
-  </style>
-</head>
-<body>
-  <div class="layout">
-    <aside>
-      <img src="https://via.placeholder.com/100" alt="Your Photo">
-      <h2>My Portfolio</h2>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main>
-      <section id="home">
-        <hgroup>
-          <h2>Welcome</h2>
-          <h3>Introduction</h3>
-        </hgroup>
-        <p>Hello! I'm a student passionate about coding and building cool projects. Explore my portfolio to learn more.</p>
-      </section>
-
-      <section id="projects">
-        <hgroup>
-          <h2>Projects</h2>
-          <h3>Selected coding work</h3>
-        </hgroup>
-        <ul>
-          <li><strong>Project One</strong> - Description of project one. <a href="#">View Project</a></li>
-          <li><strong>Project Two</strong> - Description of project two. <a href="#">View Project</a></li>
-        </ul>
-      </section>
-
-      <section id="education">
-        <hgroup>
-          <h2>Education</h2>
-        </hgroup>
-        <ul>
-          <li>Bachelor of Science in Computer Science - University Name (202X - Present)</li>
-          <li>High School Diploma - School Name (Year)</li>
-        </ul>
-      </section>
-
-      <section id="work">
-        <hgroup>
-          <h2>Work Experience</h2>
-        </hgroup>
-        <ul>
-          <li>Intern at Company ABC - Worked on frontend development (Summer 2024)</li>
-          <li>Part-time Developer at XYZ - Maintained school website (2023)</li>
-        </ul>
-      </section>
-
-      <section id="blog">
-        <hgroup>
-          <h2>Blog</h2>
-          <h3>Sharing my thoughts</h3>
-        </hgroup>
-        <article>
-          <h4>My Journey into Web Development</h4>
-          <p>This is a sample blog post about how I started learning web dev...</p>
-        </article>
-      </section>
-
-      <section id="contact">
-        <hgroup>
-          <h2>Contact</h2>
-          <h3>Get in touch with me</h3>
-        </hgroup>
-        <form class="grid">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" onclick="event.preventDefault()">Send Message</button>
-        </form>
-        <p>Connect with me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> and <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>.</p>
-      </section>
-
-      <footer>
-        <small>
-          &copy; 2025 Your Name. All rights reserved.
-        </small>
-      </footer>
-    </main>
-  </div>
-</body>
-</html>
+      border-top: 1px
