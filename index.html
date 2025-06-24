@@ -6,62 +6,71 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <style>
-    :root {
-      --primary: #4a90e2;
-      --primary-hover: #357ab8;
-      --background-color: #f4f9fc;
-      --text-color: #333;
-    }
-    body {
-      display: flex;
-      margin: 0;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      box-sizing: border-box;
-    }
-    aside {
-      width: 250px;
-      position: fixed;
-      background: #ffffff;
-      padding: 1rem;
-      border-right: 1px solid #ddd;
-      text-align: center;
-    }
-    aside img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    main {
-      margin-left: 250px;
-  padding: 2rem 3rem;
-  width: calc(100% - 250px);
-  box-sizing: border-box;
+  :root {
+    --primary: #4a90e2;
+    --primary-hover: #357ab8;
+    --background-color: #f4f9fc;
+    --text-color: #333;
+  }
 
-    }
-    section {
-      margin-bottom: 4rem;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-    nav li {
-      margin-bottom: 1rem;
-    }
-    footer {
-      margin-top: 3rem;
-      border-top: 1px solid #ccc;
-      padding-top: 1rem;
-    }
-    a {
-      color: var(--primary);
-    }
-    a:hover {
-      color: var(--primary-hover);
-    }
-  </style>
+  body {
+    display: flex;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  aside {
+    width: 250px;
+    background: #ffffff;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  aside img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  main {
+    padding: 2rem 3rem;
+    flex: 1;
+    box-sizing: border-box;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav li {
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    margin-top: 3rem;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+  }
+
+  a {
+    color: var(--primary);
+  }
+
+  a:hover {
+    color: var(--primary-hover);
+  }
+</style>
 </head>
 <body>
   <aside>
