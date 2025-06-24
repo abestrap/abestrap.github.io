@@ -13,10 +13,6 @@
       --text-color: #333;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
@@ -24,53 +20,61 @@
       color: var(--text-color);
     }
 
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
-
-    aside {
-      width: 250px;
+    header {
       background: white;
-      padding: 1rem;
-      border-right: 1px solid #ddd;
-      position: fixed;
-      left: 0;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      position: sticky;
       top: 0;
-      bottom: 0;
-      overflow-y: auto;
+      z-index: 1000;
     }
 
-    aside img {
-      width: 100px;
-      height: 100px;
+    header img {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      margin-bottom: 1rem;
+      flex-shrink: 0;
     }
 
-    main {
-      margin-left: 250px;
-      padding: 2rem;
-      width: calc(100% - 250px);
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      flex-grow: 1;
     }
 
     nav ul {
       list-style: none;
+      margin: 0;
       padding: 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
-    nav li {
-      margin-bottom: 1rem;
-    }
-
-    a {
+    nav a {
       color: var(--primary);
       text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    a:hover {
+    nav a:hover,
+    nav a:focus {
       color: var(--primary-hover);
-      text-decoration: underline;
+      background-color: #e0f0ff;
+      outline: none;
+    }
+
+    main {
+      padding: 2rem 3rem;
+      max-width: 900px;
+      margin: auto;
     }
 
     section {
@@ -78,102 +82,94 @@
     }
 
     footer {
-      margin-top: 3rem;
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem 3rem 2rem;
       border-top: 1px solid #ccc;
-      padding-top: 1rem;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <div class="layout">
-    <aside>
-      <img src="https://via.placeholder.com/100" alt="Your Photo" />
-      <h2>My Portfolio</h2>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </aside>
 
-    <main>
-      <section id="home">
-        <hgroup>
-          <h2>Welcome</h2>
-          <h3>Introduction</h3>
-        </hgroup>
-        <p>Hello! I'm a student passionate about coding and building cool projects. Explore my portfolio to learn more.</p>
-      </section>
+  <header>
+    <img src="https://via.placeholder.com/100" alt="Your Photo" />
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home" tabindex="1">Home</a></li>
+        <li><a href="#projects" tabindex="2">Projects</a></li>
+        <li><a href="#education" tabindex="3">Education</a></li>
+        <li><a href="#work" tabindex="4">Work</a></li>
+        <li><a href="#blog" tabindex="5">Blog</a></li>
+        <li><a href="#contact" tabindex="6">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <section id="projects">
-        <hgroup>
-          <h2>Projects</h2>
-          <h3>Selected coding work</h3>
-        </hgroup>
-        <ul>
-          <li><strong>Project One</strong> – Description of project one. <a href="#">View Project</a></li>
-          <li><strong>Project Two</strong> – Description of project two. <a href="#">View Project</a></li>
-        </ul>
-      </section>
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <h3>Introduction</h3>
+      <p>Hello! I'm a student passionate about coding and building cool projects. Explore my portfolio to learn more.</p>
+    </section>
 
-      <section id="education">
-        <hgroup>
-          <h2>Education</h2>
-        </hgroup>
-        <ul>
-          <li>Bachelor of Science in Computer Science – University Name (202X – Present)</li>
-          <li>High School Diploma – School Name (Year)</li>
-        </ul>
-      </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <h3>Selected coding work</h3>
+      <ul>
+        <li><strong>Project One</strong> – Description of project one. <a href="#">View Project</a></li>
+        <li><strong>Project Two</strong> – Description of project two. <a href="#">View Project</a></li>
+      </ul>
+    </section>
 
-      <section id="work">
-        <hgroup>
-          <h2>Work Experience</h2>
-        </hgroup>
-        <ul>
-          <li>Intern at Company ABC – Worked on frontend development (Summer 2024)</li>
-          <li>Part-time Developer at XYZ – Maintained school website (2023)</li>
-        </ul>
-      </section>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Bachelor of Science in Computer Science – University Name (202X – Present)</li>
+        <li>High School Diploma – School Name (Year)</li>
+      </ul>
+    </section>
 
-      <section id="blog">
-        <hgroup>
-          <h2>Blog</h2>
-          <h3>Sharing my thoughts</h3>
-        </hgroup>
-        <article>
-          <h4>My Journey into Web Development</h4>
-          <p>This is a sample blog post about how I started learning web dev...</p>
-        </article>
-      </section>
+    <section id="work">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>Intern at Company ABC – Worked on frontend development (Summer 2024)</li>
+        <li>Part-time Developer at XYZ – Maintained school website (2023)</li>
+      </ul>
+    </section>
 
-      <section id="contact">
-        <hgroup>
-          <h2>Contact</h2>
-          <h3>Get in touch with me</h3>
-        </hgroup>
-        <form class="grid">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" onclick="event.preventDefault()">Send Message</button>
-        </form>
-        <p>
-          Connect with me on
-          <a href="https://github.com/yourusername" target="_blank">GitHub</a> and
-          <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>.
-        </p>
-      </section>
+    <section id="blog">
+      <h2>Blog</h2>
+      <h3>Sharing my thoughts</h3>
+      <article>
+        <h4>My Journey into Web Development</h4>
+        <p>This is a sample blog post about how I started learning web dev...</p>
+      </article>
+    </section>
 
-      <footer>
-        <small>&copy; 2025 Your Name. All rights reserved.</small>
-      </footer>
-    </main>
-  </div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <h3>Get in touch with me</h3>
+      <form class="grid">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" onclick="event.preventDefault()">Send Message</button>
+      </form>
+      <p>
+        Connect with me on
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a> and
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
 </body>
 </html>
